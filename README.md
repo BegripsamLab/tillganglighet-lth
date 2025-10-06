@@ -17,13 +17,13 @@ Both projects are designed to help you:
 
 An e-commerce checkout page that simulates an online shopping cart experience. Users can view their order summary, modify quantities, add related products, and "complete" their purchase.
 
-**Focus areas**: Form accessibility, navigation flow, interactive elements, and live updates.
+**Focus areas**: Form accessibility, navigation flow, interactive elements and live updates.
 
 ### ☕ Coffee Shop
 
 A coffee shop website featuring a homepage and product pages. Users can browse the main site, navigate through different sections, and view product offerings in a business web presence.
 
-**Focus areas**: Content structure, navigation patterns, product displays, and overall site accessibility.
+**Focus areas**: Content structure, navigation patterns, dialogs, and overall site accessibility.
 
 ## 🚀 Getting Started
 
