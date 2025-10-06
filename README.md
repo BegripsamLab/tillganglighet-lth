@@ -25,6 +25,15 @@ A coffee shop website featuring a homepage and product pages. Users can browse t
 
 **Focus areas**: Content structure, navigation patterns, dialogs, and overall site accessibility.
 
+## 💻 Technologies Used
+
+Both projects are built with standard web technologies to ensure accessibility testing can focus on fundamental web practices:
+
+- **HTML5** - Semantic markup and structure
+- **CSS3** - Styling, layout, and visual design
+- **Vanilla JavaScript** - Interactive functionality and dynamic content
+- **No frameworks** - Pure web technologies for educational clarity
+
 ## 🚀 Getting Started
 
 **Choose one project to work with for this exercise.**
