@@ -1,6 +1,5 @@
 // Deliberately inaccessible JavaScript for educational purposes
 
-// Order management
 let orderData = {
   subtotal: 1747,
   shipping: 89,
@@ -19,7 +18,6 @@ let orderData = {
 };
 
 function addProduct(id, name, price) {
-  // Check if product already exists
   const existingProduct = orderData.addedProducts.find((p) => p.id === id);
 
   if (existingProduct) {
@@ -37,12 +35,9 @@ function addProduct(id, name, price) {
   }
 
   updateOrderTotals();
-
-  // Deliberately poor feedback - no screen reader announcement
 }
 
 function changeQuantity(productId, change) {
-  // Check if it's a base product
   const baseProduct = orderData.baseProducts.find((p) => p.id === productId);
   if (baseProduct) {
     const newQuantity = baseProduct.quantity + change;
@@ -56,7 +51,6 @@ function changeQuantity(productId, change) {
     return;
   }
 
-  // Check if it's an added product
   const addedProduct = orderData.addedProducts.find((p) => p.id === productId);
   if (addedProduct) {
     const newQuantity = addedProduct.quantity + change;
@@ -71,7 +65,6 @@ function changeQuantity(productId, change) {
 }
 
 function removeProduct(productId) {
-  // Check if it's a base product
   const baseProductIndex = orderData.baseProducts.findIndex(
     (p) => p.id === productId
   );
@@ -85,7 +78,6 @@ function removeProduct(productId) {
     return;
   }
 
-  // Check if it's an added product
   const addedProductIndex = orderData.addedProducts.findIndex(
     (p) => p.id === productId
   );
@@ -100,7 +92,6 @@ function removeProduct(productId) {
 }
 
 function changeQuantity(productId, change) {
-  // Check if it's a base product
   const baseProduct = orderData.baseProducts.find((p) => p.id === productId);
   if (baseProduct) {
     const newQuantity = baseProduct.quantity + change;
@@ -114,7 +105,6 @@ function changeQuantity(productId, change) {
     return;
   }
 
-  // Check if it's an added product
   const addedProduct = orderData.addedProducts.find((p) => p.id === productId);
   if (addedProduct) {
     const newQuantity = addedProduct.quantity + change;
@@ -129,7 +119,6 @@ function changeQuantity(productId, change) {
 }
 
 function removeProduct(productId) {
-  // Check if it's a base product
   const baseProductIndex = orderData.baseProducts.findIndex(
     (p) => p.id === productId
   );
@@ -143,7 +132,6 @@ function removeProduct(productId) {
     return;
   }
 
-  // Check if it's an added product
   const addedProductIndex = orderData.addedProducts.findIndex(
     (p) => p.id === productId
   );
@@ -171,7 +159,6 @@ function addProductToDisplay(product) {
   productElement.className = "product-item";
   productElement.id = `product-${product.id}`;
 
-  // Get the correct image URL based on product ID
   const imageUrls = {
     mouse:
       "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop",
@@ -251,9 +238,7 @@ function updateOrderTotals() {
   document.getElementById("total").textContent = `${total} kr`;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Form is ready but provides no accessibility features
-});
+document.addEventListener("DOMContentLoaded", function () {});
 
 function validateForm() {
   const errors = [];
@@ -335,7 +320,6 @@ function displayErrors(errors) {
     errorContainer.innerHTML = errorHtml;
     errorContainer.classList.add("show");
 
-    // Deliberately poor focus management - no announcement to screen readers
     errorContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
   } else {
     errorContainer.classList.remove("show");
@@ -374,7 +358,6 @@ function submitForm() {
       '<div style="color: #28a745; font-weight: bold; padding: 15px; background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px;">✓ Beställning genomförd! Du kommer att få ett bekräftelsemail inom kort.</div>';
     errorContainer.classList.add("show");
 
-    // Deliberately poor success handling - no screen reader announcement
     setTimeout(() => {
       if (confirm("Beställning genomförd! Vill du göra en ny beställning?")) {
         clearForm();
@@ -397,19 +380,13 @@ function clearForm() {
   });
 
   clearErrors();
-
-  // No focus management after clearing
 }
 
-// Deliberately poor keyboard navigation
 document.addEventListener("keydown", function (e) {
-  // Trap focus inappropriately and provide no keyboard shortcuts
   if (e.key === "Tab") {
-    // Let default behavior happen but provide no visual focus indicators
   }
 });
 
-// Add some mouse-only interactions
 document.querySelectorAll(".checkbox-group").forEach((group) => {
   group.addEventListener("click", function (e) {
     if (e.target.tagName !== "INPUT") {
