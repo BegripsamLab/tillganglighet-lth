@@ -93,6 +93,22 @@ checkout/
 - Tests compliance with WCAG 2.1 Success Criterion 1.4.12 (Text Spacing)
 - Access: [https://codepen.io/stevef/full/YLMqbo](https://codepen.io/stevef/full/YLMqbo)
 
+### Accessibility Auditing Tools
+
+**Chrome DevTools Accessibility Reference**
+
+- Built-in accessibility testing tools in Chrome browser
+- Comprehensive guide to using DevTools for accessibility auditing
+- Includes accessibility pane, contrast checking, and more
+- Guide: [https://developer.chrome.com/docs/devtools/accessibility/reference](https://developer.chrome.com/docs/devtools/accessibility/reference)
+
+**axe DevTools Browser Extension**
+
+- Professional accessibility testing extension by Deque
+- Automated accessibility scanning and guided testing
+- Provides detailed issue reports and remediation guidance
+- Download: [https://www.deque.com/get-started-axe-devtools-browser-extension/?utm_campaign=devtools](https://www.deque.com/get-started-axe-devtools-browser-extension/?utm_campaign=devtools)
+
 ## 📚 Useful Reading Materials
 
 **Inclusive Components**

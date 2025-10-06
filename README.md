@@ -36,12 +36,6 @@ A coffee shop website featuring a homepage and product pages. Users can browse t
 
 ## 📝 Exercise Instructions
 
-Each project includes comprehensive testing guidelines covering:
-
-- Manual keyboard navigation testing
-- Tool-based accessibility scanning
-- Screen reader testing (if available)
-- Documentation of findings
-- Implementation of solutions
+Each project includes testing guidelines.
 
 Choose the project that interests you most and dive into the accessibility testing process!
