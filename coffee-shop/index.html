@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Morning Brew Coffee Shop</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="nav-brand">The Morning Brew</div>
+        <div class="nav-menu">
+          <div>
+            <span onclick="location.href='/'" style="cursor: pointer"
+              >Home</span
+            >
+          </div>
+          <div>
+            <span
+              onclick="location.href='/product.html'"
+              style="cursor: pointer"
+              >Products</span
+            >
+          </div>
+          <div>
+            <span onclick="location.href='#about'" style="cursor: pointer"
+              >About</span
+            >
+          </div>
+          <div>
+            <span onclick="location.href='#contact'" style="cursor: pointer"
+              >Contact</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-title">Welcome to The Morning Brew</div>
+        <div class="hero-subtitle">Where every cup tells a story</div>
+        <div class="hero-btn" id="menuBtn" onclick="scrollToMenu()">
+          View Our Menu
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">☕</div>
+            <div
+              style="
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+                color: #2c1810;
+                font-weight: bold;
+              "
+            >
+              Premium Coffee
+            </div>
+            <div>
+              Freshly roasted beans from around the world, brewed to perfection
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🥐</div>
+            <div
+              style="
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+                color: #2c1810;
+                font-weight: bold;
+              "
+            >
+              Fresh Pastries
+            </div>
+            <div>Baked daily with love and the finest ingredients</div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏡</div>
+            <div
+              style="
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+                color: #2c1810;
+                font-weight: bold;
+              "
+            >
+              Cozy Atmosphere
+            </div>
+            <div>
+              A warm and welcoming space to relax, work, or meet friends
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-preview" id="menu">
+      <div class="container">
+        <div class="section-title">Our Signature Drinks</div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div style="font-size: 2.5rem; margin-bottom: 32px; color: #2c1810">
+            Our Story
+          </div>
+          <div>
+            Founded in 2010, The Morning Brew has been serving the community
+            with exceptional coffee and warm hospitality. We believe in the
+            simple pleasure of a perfectly crafted cup of coffee and the
+            connections it creates.
+          </div>
+          <div>
+            Our baristas are passionate artisans who take pride in every
+            espresso pulled and every latte poured. We source our beans
+            ethically and roast them in small batches to ensure the highest
+            quality.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hours" id="contact">
+      <div class="container">
+        <div class="section-title">Visit Us</div>
+        <div class="hours-content">
+          <div class="hours-info">
+            <div style="font-size: 1.5rem; margin-bottom: 16px; color: #2c1810">
+              Hours
+            </div>
+            <div>Monday - Friday: 6:00 AM - 8:00 PM</div>
+            <div>Saturday - Sunday: 7:00 AM - 9:00 PM</div>
+          </div>
+          <div class="hours-info">
+            <div style="font-size: 1.5rem; margin-bottom: 16px; color: #2c1810">
+              Location
+            </div>
+            <div>123 Main Street</div>
+            <div>Coffee Town, CT 12345</div>
+            <div>(555) 123-4567</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div>&copy; 2025 The Morning Brew. All rights reserved.</div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

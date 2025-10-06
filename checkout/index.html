@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kassan - Tillgänglighetsövning</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="related-products">
+        <div class="section-title">Andra har också köpt</div>
+
+        <div class="related-product">
+          <img
+            src="https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop"
+            class="related-product-image"
+          />
+          <div class="related-product-details">
+            <div class="related-product-name">Trådlös Mus</div>
+            <div class="related-product-price">349 kr</div>
+            <button
+              class="related-product-btn"
+              onclick="addProduct('mouse', 'Trådlös Mus', 349)"
+            >
+              Lägg till
+            </button>
+          </div>
+        </div>
+
+        <div class="related-product">
+          <img
+            src="https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop"
+            class="related-product-image"
+          />
+          <div class="related-product-details">
+            <div class="related-product-name">Tangentbord</div>
+            <div class="related-product-price">599 kr</div>
+            <button
+              class="related-product-btn"
+              onclick="addProduct('keyboard', 'Tangentbord', 599)"
+            >
+              Lägg till
+            </button>
+          </div>
+        </div>
+
+        <div class="related-product">
+          <img
+            src="https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop"
+            class="related-product-image"
+          />
+          <div class="related-product-details">
+            <div class="related-product-name">Webbkamera HD</div>
+            <div class="related-product-price">799 kr</div>
+            <button
+              class="related-product-btn"
+              onclick="addProduct('webcam', 'Webbkamera HD', 799)"
+            >
+              Lägg till
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="form-header">
+          <div class="title">Kassa</div>
+        </div>
+
+        <div class="form-container">
+          <div class="order-summary">
+            <div class="section-title">Ordersammanfattning</div>
+
+            <div class="product-item">
+              <img
+                src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                class="product-image"
+              />
+              <div class="product-details">
+                <div class="product-name">Trådlösa Bluetooth-hörlurar</div>
+                <div class="product-description">
+                  Premium brusreducerande hörlurar
+                </div>
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('headphones', -1)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity-display"
+                    >Antal: <span id="qty-headphones">1</span></span
+                  >
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('headphones', 1)"
+                  >
+                    +
+                  </button>
+                  <button
+                    class="remove-btn"
+                    onclick="removeProduct('headphones')"
+                  >
+                    Ta bort
+                  </button>
+                </div>
+              </div>
+              <div class="product-price" id="price-headphones">1 299 kr</div>
+            </div>
+
+            <div class="product-item">
+              <img
+                src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                class="product-image"
+              />
+              <div class="product-details">
+                <div class="product-name">Mobilskal</div>
+                <div class="product-description">
+                  Skyddande silikonskal - Blå
+                </div>
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('case', -1)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity-display"
+                    >Antal: <span id="qty-case">2</span></span
+                  >
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('case', 1)"
+                  >
+                    +
+                  </button>
+                  <button class="remove-btn" onclick="removeProduct('case')">
+                    Ta bort
+                  </button>
+                </div>
+              </div>
+              <div class="product-price" id="price-case">249 kr</div>
+            </div>
+
+            <div class="product-item">
+              <img
+                src="https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
+                class="product-image"
+              />
+              <div class="product-details">
+                <div class="product-name">USB-C Laddkabel</div>
+                <div class="product-description">2m flätad kabel - Svart</div>
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('cable', -1)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity-display"
+                    >Antal: <span id="qty-cable">1</span></span
+                  >
+                  <button
+                    class="quantity-btn"
+                    onclick="changeQuantity('cable', 1)"
+                  >
+                    +
+                  </button>
+                  <button class="remove-btn" onclick="removeProduct('cable')">
+                    Ta bort
+                  </button>
+                </div>
+              </div>
+              <div class="product-price" id="price-cable">199 kr</div>
+            </div>
+
+            <div id="added-products"></div>
+
+            <div class="order-totals">
+              <div class="total-row">
+                <span>Delsumma:</span>
+                <span id="subtotal">1 747 kr</span>
+              </div>
+              <div class="total-row">
+                <span>Frakt:</span>
+                <span id="shipping">89 kr</span>
+              </div>
+              <div class="total-row">
+                <span>Moms:</span>
+                <span id="tax">367 kr</span>
+              </div>
+              <div class="total-row total-final">
+                <span>Totalt:</span>
+                <span id="total">2 203 kr</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider">
+            <div class="section-title">Fakturauppgifter</div>
+          </div>
+
+          <div class="form-wrapper">
+            <!-- Deliberately inaccessible form -->
+            <div class="input-group">
+              <input
+                type="text"
+                id="fname"
+                placeholder="Förnamn*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="lname"
+                placeholder="Efternamn*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="email"
+                placeholder="E-postadress*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Telefonnummer"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="address1"
+                placeholder="Adress rad 1*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="address2"
+                placeholder="Adress rad 2"
+                class="input-field"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Stad*"
+                  class="input-field"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  id="zip"
+                  placeholder="Postnummer*"
+                  class="input-field"
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <select id="country" class="input-field">
+                <option value="">Välj land*</option>
+                <option value="SE">Sverige</option>
+                <option value="NO">Norge</option>
+                <option value="DK">Danmark</option>
+                <option value="FI">Finland</option>
+              </select>
+            </div>
+
+            <div class="section-divider">
+              <div class="section-title">Leveransuppgifter</div>
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="ship-fname"
+                placeholder="Förnamn*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="ship-lname"
+                placeholder="Efternamn*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="ship-address1"
+                placeholder="Adress rad 1*"
+                class="input-field"
+              />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="ship-address2"
+                placeholder="Adress rad 2"
+                class="input-field"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  id="ship-city"
+                  placeholder="Stad*"
+                  class="input-field"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  id="ship-zip"
+                  placeholder="Postnummer*"
+                  class="input-field"
+                />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <select id="ship-country" class="input-field">
+                <option value="">Välj land*</option>
+                <option value="SE">Sverige</option>
+                <option value="NO">Norge</option>
+                <option value="DK">Danmark</option>
+                <option value="FI">Finland</option>
+              </select>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="newsletter" />
+              <span class="checkbox-text">Prenumerera på nyhetsbrev</span>
+            </div>
+
+            <div class="button-group">
+              <div class="btn secondary" onclick="clearForm()">Rensa</div>
+              <div class="btn primary" onclick="submitForm()">
+                Skicka beställning
+              </div>
+            </div>
+
+            <div id="error-container" class="error-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
